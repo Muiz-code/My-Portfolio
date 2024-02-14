@@ -1,0 +1,219 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  background-color: #210002;
+}
+
+#textblock {
+  background-color: #210002;
+  height: 200vh !important;
+}
+
+#textblock-container {
+  width: 50%;
+  margin: 0 auto;
+  padding-top: 70px;
+}
+
+#textblock-title {
+  color: #ffaf1b;
+  font-size: 35px;
+  font-weight: 600;
+  font-family: "Helvetica Neue";
+}
+
+#textblock-content {
+  color: #ffaf1b;
+  font-size: 20px;
+}
+
+#textblock-footer {
+  color: #ffaf1b;
+  font-size: 15px;
+  font-weight: 400;
+  position: fixed;
+  width: 100%;
+  bottom: 0px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+#textblock-devsense {
+  text-decoration: none;
+  color: #ffaf1b;
+  font-size: 15px;
+  font-weight: 600;
+}
+/* Expand review */
+.name h1 span {
+  letter-spacing: 2px;
+  padding: 2rem 0rem 2rem 0rem;
+  cursor: pointer;
+  transition: 0.5s linear;
+  text-decoration: none;
+}
+
+.name h1:hover .muiz:nth-child(1):after {
+  margin-left: 10px;
+  content: ".OWOLABI";
+}
+.name h1:hover .muiz:nth-child(2) {
+  margin-left: 30px;
+}
+.name h1:hover span {
+  color: #e1d7c4;
+}
+
+.twitter,
+.insta,
+.git {
+  letter-spacing: 2px;
+  cursor: pointer;
+  transition: 0.5s linear;
+  text-decoration: none;
+  font-size: 15px;
+  gap: 10px;
+}
+.twitter:hover:before {
+  content: "@muizCode";
+}
+.twitter:hover {
+  color: rgb(60, 128, 218);
+}
+.insta:hover {
+  background: -webkit-linear-gradient(
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285aeb 90%
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.insta:hover:before {
+  content: "@that_muiz";
+}
+.linkedin:hover:before {
+  content: "@muizCode";
+}
+.linkedin:hover {
+  color: rgb(60, 128, 218);
+}
+.git:hover:before {
+  margin-left: 10px;
+  content: "@Muiz-code";
+  color: #fff;
+}
+
+.list {
+  display: flex;
+  flex-direction: column;
+  list-style: circle;
+  line-height: 40px;
+  transform: translate(-50%, -50%);
+}
+.listItems {
+  transition: all 0.25s;
+}
+.listItems:hover {
+  letter-spacing: 5px;
+}
+.list .listItems,
+.list .listItems::after,
+.list .listItems::before {
+  transition: all 0.5s;
+}
+.list .listItems:hover {
+  color: #555;
+}
+.dynamic-text {
+  display: flex;
+  flex-direction: column;
+  height: 5vh;
+  width: 100%;
+  gap: 10px;
+  overflow: hidden;
+}
+.dynamic-text li {
+  animation: slide 12s steps(4) infinite;
+  position: relative;
+  top: 0;
+  left: 0;
+}
+@keyframes slide {
+  100% {
+    top: -180px;
+  }
+}
+
+.dynamic-text li span {
+  position: relative;
+}
+.dynamic-text li span::after {
+  content: " ";
+  position: absolute;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #210002;
+  border-left: 2px solid #e1d7c4;
+  animation: typing 3s steps(18) infinite;
+}
+@keyframes typing {
+  100% {
+    left: 100%;
+    margin: 0 -35px 0 35px;
+  }
+}
+
+.sliderContainer {
+  position: absolute;
+  top: calc(100vh - 650px);
+  border: 1px solid;
+}
+
+.slider {
+  position: relative;
+  white-space: nowrap;
+}
+
+.slider p {
+  position: relative;
+  margin: 0px;
+  color: white;
+  font-size: 230px;
+  font-weight: 500;
+  padding-right: 50px;
+}
+
+.slider p:nth-of-type(2) {
+  position: absolute;
+  left: 100%;
+  top: 0;
+}
+.navBar {
+  background: url(./assets/waves.svg);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: top;
+  height: 30vh;
+}
+.motionX {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  background: none;
+
+}
+circle,
+rect,
+line {
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: transparent;
+}
